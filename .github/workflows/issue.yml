@@ -1,0 +1,10 @@
+name: IssueListener
+on:
+  issues:
+    types: [opened]
+jobs:
+  listener:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Comment
+      run: echo "${{toJson(github)}}"

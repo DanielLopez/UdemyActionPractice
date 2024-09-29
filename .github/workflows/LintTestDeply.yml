@@ -7,10 +7,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - name: lint
-      run: eslint --ext .jsx --fix src
-    - name: build
-      run: vite build
+      run: lint
     - name: test
-      run: vitest run
+      run: test      
+    - name: build
+      run: build
     - name: deploy
       run: echo "Deploying"
