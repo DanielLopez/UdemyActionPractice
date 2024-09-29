@@ -13,19 +13,18 @@ jobs:
         node-version: '14'  # Specify the Node.js version
 
     - name: Install dependencies
-      run: npm install  
+      run: |
+        npm install  
+        npm install eslint --save-dev    
 
-    - name: Install ESLint
-      run: npm install eslint --save-dev    
-    
     - name: lint
-      run: eslint --ext .jsx --fix src
+      run: npx eslint --ext .jsx --fix src
     
     - name: test
-      run: vitest run      
+      run: npx vitest run      
     
     - name: build
-      run: vite build
+      run: npx vite build
     
     - name: deploy
       run: echo "Deploying"
