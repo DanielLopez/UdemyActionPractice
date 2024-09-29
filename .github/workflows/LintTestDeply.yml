@@ -1,5 +1,9 @@
 name: lintTestDeploy
-on: workflow_dispatch
+on: 
+  workflow_dispatch
+  push:
+    branches:
+      - master
 jobs:
   lintTestDeploy:
     runs-on: ubuntu-latest    
