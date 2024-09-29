@@ -13,7 +13,10 @@ jobs:
         node-version: '14'  # Specify the Node.js version
 
     - name: Install dependencies
-      run: npm install      
+      run: npm install  
+
+    - name: Install ESLint
+      run: npm install eslint --save-dev    
     
     - name: lint
       run: eslint --ext .jsx --fix src
